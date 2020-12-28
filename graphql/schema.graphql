@@ -1,0 +1,17 @@
+type Movie {
+    id:Int!
+    title:String!
+    rating:Float!
+    summary:String
+    language:String
+    medium_cover_image : String!
+}
+type Query{
+    movies(limit:Int,rating:Float): [Movie]! 
+    # movie(id:Int!):Movie #못찾을수도 있으니까
+}
+
+# type Mutation {
+#     addMovie(name:String!,score:Int!):Movie!
+#     deleteMovie(id:Int!):Boolean!
+# }
